@@ -1,0 +1,23 @@
+Project:
+ ☐ POC - 航班信息自动推送 @due(18-08-29)
+ Service Worker
+ SSE - Server Sent Events
+ Push API & Notification API
+
+Office:
+ ☐ NHO技术架构介绍 @due(18-08-26) @high
+
+Leaning:
+ ☐ Google mWeb Specialist Certification
+   ☐ HTTP access control(CORS)
+   ✔ Grid at MDN @due(18-08-24) @done (18-08-24 11:26)
+ ☐ webpack
+ ☐ docker
+ ☐ aws
+ ✘ vue @cancelled (18-08-23 22:16)
+
+Books:
+ ☐ 黑客与画家 @due(18-08-30)
+ ☐ 金字塔原理
+ ✔ 凤凰项目 @done (18-08-23 22:15)
+ ✔ Rework @done (18-08-23 22:15)

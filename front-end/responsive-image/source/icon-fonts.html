@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Icon Fonts</title>
+	<style>
+    @import url(http://weloveiconfonts.com/api/?family=zocial);
+    [class*="zocial-"]:before {
+       display: inline-block;
+       font-family: 'zocial', sans-serif;
+       text-shadow: 3px 3px 3px #aaa;
+    }
+
+    body {
+    	font-family: 'Roboto Condensed'
+    	margin: 20vh 0;
+    }
+
+    li {
+    	font-size: 10vw;
+    	list-style: none;
+    	margin: 3vw 0;
+    	padding-left: 100px;
+    }
+	</style>
+</head>
+<body>
+	<li class="zocial-twitter"> Twitter</li>
+	<li class="zocial-yahoo"> Yahoo</li>
+	<li class="zocial-weibo"> Weibo</li>
+	<li class="zocial-youtube"> Youtube</li>
+</body>
+</html>

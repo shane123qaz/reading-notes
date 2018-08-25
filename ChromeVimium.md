@@ -1,0 +1,21 @@
+# Vimium Command Line
+
+- j: scroll down
+- k: scroll up
+- h: scroll left
+- l: scroll right
+- gg: scroll to page top
+- G: scroll to page bottom
+- d: page down
+- u: page up
+- r: reload page
+- b: open a bookmark in the current tab
+- B: open a bookmark in a new tab
+- p: open copy URL in current tab
+- P: open copy URL in a new tab
+- /: find
+- f: display shortcut keys
+- H: back to previous history
+- L: forwart to next history
+- x: close current tab
+- ?: help

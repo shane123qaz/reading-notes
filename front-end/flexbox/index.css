@@ -1,0 +1,33 @@
+.containerA {
+	display: flex;
+	flex-flow: row;
+	/*justify-content: space-between;*/
+}
+
+.itemA {
+	/*flex-grow: 2;*/
+	/*flex-shrink: 1;*/
+	/*flex: 0 0 auto;*/
+}
+.itemB {
+	/*flex-grow: 1;*/
+	/*flex-shrink: 2;*/
+	/*flex: 0 0 auto;*/
+}
+.itemC {
+	order: -1;
+	/*flex-basis: 100px;*/
+	/*flex-grow: 1;*/
+	/*flex-shrink: 0;*/
+	/*flex: 0 1 auto;*/
+}
+
+
+.containerB {
+	display: flex;
+	flex-direction: row;
+}
+
+.space-left {
+	margin-left: auto;
+}
