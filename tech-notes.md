@@ -5,6 +5,7 @@
 ### [Flexbox](./front-end/Flexbox.md)
 ### [Grid](./front-end/Grid.md)
 ### Tools
+- [chrome-vimium](./tools/chrome-vimium.md)
 #### Http server
 - http-server
 - python -m SimpleHTTPServer 8080
