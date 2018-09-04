@@ -6,6 +6,7 @@
 ### [Grid](./front-end/Grid.md)
 ### Tools
 - [chrome-vimium](./tools/chrome-vimium.md)
+- [free pictures](https://pixabay.com/)
 #### Http server
 - http-server
 - python -m SimpleHTTPServer 8080
@@ -14,8 +15,9 @@
 - [wesomes](https://www.awesomes.cn/repos/Applications/Frameworks)
 - [puppeteer](https://www.awesomes.cn/repo/GoogleChrome/puppeteer)
 - [cmd](https://github.com/jlevy/the-art-of-command-line)
-- frameworks
+- language & frameworks
     + [electron `build cross-platform desktop app with js/html/css`](https://github.com/electron/electron)
+    + [perl](https://www.perl.org/)
 
 
 
