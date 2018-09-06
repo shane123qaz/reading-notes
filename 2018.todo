@@ -1,0 +1,32 @@
+Project:
+  ☐ POC - 航班信息自动推送
+    Service Worker
+    SSE - Server Sent Events
+    Push API & Notification API
+  ✔ defect写原因和解决方案 @done(18-09-03 17:34)
+
+Office:
+  ☐ pre-senior材料准备 @high
+  ✔ NHO技术架构介绍 @high @done(18-08-28 11:24)
+
+Leaning:
+  front end
+    ☐ Google mWeb Specialist Certification
+      ☐ Progressive Web App @started(18-09-04 13:20)
+        Service Worker
+        Web App Manifests
+      ✔ HTTP access control(CORS) @done(18-09-04 13:20)
+      ✔ Grid at MDN @done(18-08-24 11:26)
+    ☐ vue
+      VueJs
+      Vuex
+    ☐ webpack
+  Devops
+    ☐ docker @started(18-09-05 14:44)
+    ☐ aws
+
+Books:
+  ☐ 黑客与画家 @started(18-09-04 13:20)
+  ☐ 金字塔原理
+  ✔ 凤凰项目 @done(18-08-23 22:15)
+  ✔ Rework @done(18-08-23 22:15)

@@ -40,9 +40,33 @@ graph LR;
     Fetch --> Idle;
 ```
 
+#### Service Worker Scope
+```js
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => something);
+}
+```
+
+- /sw.js means the service worker will fetch event for the entire origin
+- /folder/sw.js means the service worker only fetch event for the page who's URL start with /folder/something
+
+#### Caching the app shell
+```js
+self.addEventListener('activate', function(e) => {
+    e.waitUntil(
+        caches.keys
+    );
+})
+```
+
 
 ## Resources
 - [Web Page Test](https://www.webpagetest.org/)
-- [localForage - Offline storage, improved. Wraps IndexedDB, WebSQL, or localStorage using a simple but powerful API](https://localforage.github.io/localForage/)
-- [store2 -  A better way to use localStorage and sessionStorage](https://github.com/nbubna/store)
-- [lovefield - a relational database for web apps](https://github.com/google/lovefield)
+- Storage
+    - [localForage - Offline storage, improved. Wraps IndexedDB, WebSQL, or localStorage using a simple but powerful API](https://localforage.github.io/localForage/)
+    - [store2 -  A better way to use localStorage and sessionStorage](https://github.com/nbubna/store)
+    - [lovefield - a relational database for web apps](https://github.com/google/lovefield)
+- Service Worker
+    - [tool - show all the installed service workers, their state, update, get rid of them](chrome://serviceworker-internals/)
