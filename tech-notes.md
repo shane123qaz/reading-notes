@@ -4,6 +4,7 @@
 ### [Responsive image](./front-end/responsive-image/responsive-image.md)
 ### [Flexbox](./front-end/Flexbox.md)
 ### [Grid](./front-end/Grid.md)
+### [Progressive Web App](./front-end/progressive-web-app.md)
 ### Tools
 - [chrome-vimium](./tools/chrome-vimium.md)
 - [free pictures](https://pixabay.com/)
