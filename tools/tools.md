@@ -1,4 +1,6 @@
 # Tools
 ## Resources
-- [Draw Diagrams With Markdown](https://support.typora.io/Draw-Diagrams-With-Markdown/)
+- Mermaid
+    - [Draw Diagrams With Markdown](https://support.typora.io/Draw-Diagrams-With-Markdown/)
+    - [Inline in md file](https://mermaidjs.github.io/)
 - [Chrome Vimium](./chrome-vimium.md)

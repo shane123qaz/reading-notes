@@ -1,5 +1,5 @@
 Project:
-  ☐ POC - 航班信息自动推送
+  ✔ POC - 航班信息自动推送 @done(18-09-11 13:44)
     Service Worker
     SSE - Server Sent Events
     Push API & Notification API
@@ -9,24 +9,24 @@ Office:
   ☐ pre-senior材料准备 @high
   ✔ NHO技术架构介绍 @high @done(18-08-28 11:24)
 
-Leaning:
-  front end
+Learning:
+  Front end
     ☐ Google mWeb Specialist Certification
       ☐ Progressive Web App @started(18-09-04 13:20)
         Service Worker
         Web App Manifests
       ✔ HTTP access control(CORS) @done(18-09-04 13:20)
       ✔ Grid at MDN @done(18-08-24 11:26)
-    ☐ vue
-      VueJs
-      Vuex
+    ☐ wechat reading time recorder
     ☐ webpack
+  Articles
+    ☐ Summary configurating project scaffold
   Devops
     ☐ docker @started(18-09-05 14:44)
-    ☐ aws
+    ☐ AWS
 
 Books:
-  ☐ 黑客与画家 @started(18-09-04 13:20)
   ☐ 金字塔原理
+  ✔ 黑客与画家 @started(18-09-04 13:20) @done(18-09-11 13:44) @lasted(1w24m48s)
   ✔ 凤凰项目 @done(18-08-23 22:15)
   ✔ Rework @done(18-08-23 22:15)
