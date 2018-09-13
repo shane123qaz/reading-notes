@@ -230,6 +230,13 @@ sequenceDiagram
 - `Server` use the `Private Key` to sign the data and generate a `header` named `Authorization`
 - `Push Service` use the `Publish Key` which got by `endpoint` to decode the digital signature
 
+- web-push可以用于生成密钥
+```js
+const webPush = require('web-push');
+const validKeys = webPush.generateVAPIDKeys();
+console.log(validKeys.publicKey, validKeys.privateKey);
+```
+
 #### Example
 - Web Push实现步骤
     - 浏览器发起订阅， 并将订阅信息发送至服务端
