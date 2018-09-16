@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Habitual';
+    src: url('./Habitual-1/Habitual.ttf') format('tff'), url('./Habitual-1/Habitual.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: 'Habitual';
+    /* background: url('./icon.jpg'); */
+}
