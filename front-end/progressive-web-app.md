@@ -335,6 +335,18 @@ self.addEventListener('push', function(event) {
 ```html
 <link rel="manifest" href="manifest.json">
 ```
+#### Deploy to an HTTPs host
+- Github page
+- Google app engine
+- Firebase
+    - redirect all requests to HTTPs
+    - [firebase cli tool](https://github.com/firebase/firebase-tools)
+        - `npm i -g firebase-tools`
+        - commands
+            - firebase login
+            - firebase init
+            - firebase deploy
+
 
 ## Resources
 - [Web Page Test](https://www.webpagetest.org/)

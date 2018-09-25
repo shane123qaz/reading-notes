@@ -25,6 +25,8 @@
 </html>
 ```
 
+### [Webpack](./front-end/webpack.md)
+
 ### Tools
 - [chrome-vimium](./tools/chrome-vimium.md)
 - [free pictures](https://pixabay.com/)
@@ -36,6 +38,7 @@
 - [front-end online courses](https://classroom.udacity.com/me)
 - [front-end libs collection - wesomes](https://www.awesomes.cn/repos/Applications/Frameworks)
     - [using to control headless chrome by node api - puppeteer](https://www.awesomes.cn/repo/GoogleChrome/puppeteer)
+    - [libs & plugins](https://juejin.im/post/5ba7d5dd5188255c6140cc9d)
 - [cmd](https://github.com/jlevy/the-art-of-command-line)
 - language & frameworks
     + [electron `build cross-platform desktop app with js/html/css`](https://github.com/electron/electron)
