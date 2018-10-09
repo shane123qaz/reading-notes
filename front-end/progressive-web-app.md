@@ -363,3 +363,4 @@ self.addEventListener('push', function(event) {
 - PWA
     - [Web Manifest Validator](https://manifest-validator.appspot.com/)
     - [example](https://codelabs.developers.google.com/codelabs/your-first-pwapp/)
+    - [build-a-pwa-in-5-minutes](https://medium.com/dev-channel/learn-how-to-build-a-pwa-in-under-5-minutes-c860ad406ed)

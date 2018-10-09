@@ -1,0 +1,25 @@
+[debug] [2018-10-09T20:01:37.815Z] ----------------------------------------------------------------------
+[debug] [2018-10-09T20:01:37.817Z] Command:       /Users/xinzhang/.nvm/versions/node/v8.11.3/bin/node /Users/xinzhang/.nvm/versions/node/v8.11.3/bin/firebase serve
+[debug] [2018-10-09T20:01:37.817Z] CLI Version:   5.0.1
+[debug] [2018-10-09T20:01:37.817Z] Platform:      darwin
+[debug] [2018-10-09T20:01:37.817Z] Node Version:  v8.11.3
+[debug] [2018-10-09T20:01:37.818Z] Time:          Tue Oct 09 2018 15:01:37 GMT-0500 (CDT)
+[debug] [2018-10-09T20:01:37.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-09T20:01:37.829Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-09T20:01:37.829Z] > authorizing via signed-in user
+[debug] [2018-10-09T20:01:37.830Z] [iam] checking project pwa-example-id for permissions ["firebase.projects.get"]
+[debug] [2018-10-09T20:01:37.831Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pwa-example-id:testIamPermissions  
+
+[debug] [2018-10-09T20:01:37.991Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-09T20:01:37.993Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pwa-example-id  
+ 
+[debug] [2018-10-09T20:01:38.164Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/xinzhang/Documents/code/doc/reading-notes/front-end/progressive-web-app/pwa-example'...
+[info] 
+[debug] [2018-10-09T20:01:38.166Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/88502759654/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-09T20:01:38.415Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
