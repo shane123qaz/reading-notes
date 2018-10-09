@@ -15,7 +15,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script>
         // Initialize Firebase
-        var config = {
+        const config = {
             apiKey: "AIzaSyBmAeRMlQeDNoY5g4k0WN3RMml84g-fT1E",
             authDomain: "pwa-example-id.firebaseapp.com",
             databaseURL: "https://pwa-example-id.firebaseio.com",
@@ -29,6 +29,20 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js').then(() => console.log('Service Worker Registered'))
         }
+    </script>
+    <script>
+        const messaging = firebase.messaging();
+        messaging.requestPermission()
+            .then(() => {
+                console.log('Notification permission granted.');
+                return messaging.getToken();
+            })
+            .then((token) => {
+                console.log(token);
+            })
+            .catch((error) => {
+                console.log("Unable to get permission to notify.", error);
+            })
     </script>
 </body>
 
