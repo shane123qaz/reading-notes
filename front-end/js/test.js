@@ -1,5 +1,6 @@
 const path = require('path');
 const _ = require('lodash');
+const store2 = require('store2');
 
 console.log('============Node============');
 console.log('============path============');
@@ -106,3 +107,12 @@ function isEmpty(value) {
 const func = _.overSome([isNumber, isBoolean, isEmpty]);
 
 func(undefined);
+
+console.log('============Store2============');
+const obj = { a: 1, b: 2 };
+store2.set('string', JSON.stringify(obj));
+const strVal = store2.get('string');
+console.log('string value', strVal);
+store2.set('object', obj);
+const objVal = store2.get('object');
+console.log('object value', objVal);
