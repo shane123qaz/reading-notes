@@ -13,6 +13,8 @@
         "lodash": "^4.17.11"
     },
     "devDependencies": {
-        "store2": "^2.7.0"
+        "q": "^1.5.1",
+        "store2": "^2.7.0",
+        "xmlhttprequest": "^1.8.0"
     }
 }

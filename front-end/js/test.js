@@ -1,6 +1,8 @@
 const path = require('path');
 const _ = require('lodash');
 const store2 = require('store2');
+const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+const Q = require('q');
 
 console.log('============Node============');
 console.log('============path============');
@@ -116,3 +118,48 @@ console.log('string value', strVal);
 store2.set('object', obj);
 const objVal = store2.get('object');
 console.log('object value', objVal);
+
+console.log('============Promise============');
+
+function testPromise(isSuccess) {
+    return new Promise(function(resolve, reject) {
+        if (isSuccess) {
+            resolve('work well~');
+        } else {
+            reject('something wrong!');
+        }
+    });
+};
+testPromise(true).then((msg) => console.log('success:', msg), (err) => console.log('failed:', err));
+testPromise(false).then((msg) => console.log('success:', msg), (err) => console.log('failed:', err));
+console.log('============Promisifying XMLHttpRequest============');
+
+function get(url) {
+    return new Promise(function(resolve, reject) {
+        const req = new XMLHttpRequest();
+        req.open('GET', url);
+        req.onload = function() {
+            if (req.status == 200) {
+                resolve(req.response);
+            } else {
+                reject(req.statusText);
+            }
+        }
+        req.onerror = function() {
+            reject('Network Error');
+        }
+        req.send();
+    });
+};
+
+get('package.json')
+    .then(function(response) {
+        console.log('success:', response);
+    })
+    .catch(function(error) {
+        console.error('failed:', error);
+    });
+
+console.log('============Q.js============');
+Q.fcall(function() { return 10; })
+    .then((val) => console.log('wrap to a promise', val));
