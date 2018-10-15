@@ -203,3 +203,4 @@ module.exports = {
     - [react-hot-loader](https://github.com/gaearon/react-hot-loader)
     - [vue-loader](https://github.com/vuejs/vue-loader)
 - [using-webpack4-to-create-react-app](https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75)
+- [Fixing the "cannot GET /URL" error on refresh with React Router ](https://tylermcginnis.com/react-router-cannot-get-url-refresh/)

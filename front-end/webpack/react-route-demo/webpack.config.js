@@ -15,6 +15,9 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: {
+            disableDotRule: true //Fixed 404 error to redirect to url contain .
+        } //Fixed the "cannot GET /URL" error on refresh with React Router
     },
     module: {
         rules: [{
