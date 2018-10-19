@@ -286,6 +286,26 @@ if (window.CustomEvent) { //是否支持CustomEvent
 el.dispatchEvent(event);
 ```
 
+## Location change
+- navigate to external url
+    ```js
+    function navigateTo(target, newWindow) {
+        if (newWindow) {
+            window.open(target, '_blank');
+        } else {
+            window.location.href = target;
+        }
+    }
+    ```
+    - Redirect to external url
+    ```js
+    window.location.href = 'https://some-external-url';
+    ```
+    - Redirect to external url in new window
+    ```js
+    window.open('https://some-external-url', '_blank');
+    ```
+
 ## Resource
 - [原生Js实现JQuery常用方法](https://zhouyuexie.github.io/%E5%BC%80%E5%A7%8B%E6%8B%A5%E6%8A%B1%E5%8E%9F%E7%94%9Fjs%E6%96%B9%E6%B3%95%E5%90%A7/)
 - [The Complete ECMAScript 2015-2017 Guide](https://flaviocopes.com/ecmascript/#arrow-functions)
