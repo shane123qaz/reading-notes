@@ -1,8 +1,8 @@
 Project:
-  ☐ 出差准备 @high @started(18-09-17 15:16)
-    ☐ Annotated I-129S - 看看有没有时间相关的
-    ☐ 行程表  
-  ☐ Refactor router/interceptor
+  ✔ 出差准备 @high @started(18-09-17 15:16) @done(18-10-17 11:53) @lasted(4w1d20h37m56s)
+    ✔ Annotated I-129S - 看看有没有时间相关的 @done(18-10-17 11:53)
+    ✔ 行程表 @done(18-10-17 11:53)
+  ✔ Refactor router/interceptor @done(18-10-17 11:53)
   ✔ POC - 航班信息自动推送 @done(18-09-11 13:44)
     Service Worker
     SSE - Server Sent Events
@@ -16,21 +16,26 @@ Office:
 Learning:
   Front end
     ☐ Google mWeb Specialist Certification
-      ☐ Progressive Web App @started(18-09-04 13:20)
+      ☐ gulp
+      ☐ performance
+      ✔ sass & less @done(18-10-19 14:57)
+      ✔ webpack @started(18-10-17 13:10) @done(18-10-19 13:26) @lasted(2d16m23s)
+      ✔ babel @started(18-10-17 13:10) @done(18-10-17 17:32) @lasted(4h22m32s)
+      ✔ Progressive Web App @started(18-09-04 13:20) @done(18-10-03 11:54) @lasted(4w22h34m6s)
         Service Worker
         Web App Manifests
       ✔ HTTP access control(CORS) @done(18-09-04 13:20)
       ✔ Grid at MDN @done(18-08-24 11:26)
-    ☐ wechat reading time recorder
-    ☐ webpack @started(18-09-16 20:53)
+    ☐ Wechat reading time recorder
+    ☐ Native App
   Articles
     ☐ Summary configurating project scaffold
   Devops
-    ☐ docker @started(18-09-05 14:44)
+    ☐ Docker
+    ☐ Kubernates
     ☐ AWS
 
 Books:
-  ☐ 金字塔原理
   ✔ 黑客与画家 @started(18-09-04 13:20) @done(18-09-11 13:44) @lasted(1w24m48s)
   ✔ 凤凰项目 @done(18-08-23 22:15)
   ✔ Rework @done(18-08-23 22:15)
