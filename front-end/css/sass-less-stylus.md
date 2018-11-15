@@ -1,10 +1,10 @@
 # Sass/Scss & Less
 - 都是css的预编译处理语言
-- 引入了mixinx，参数，嵌套规则，运算，颜色，名字空间，作用域，Js赋值
+- 引入了mixin，参数，嵌套规则，运算，颜色，名字空间，作用域，Js赋值
 
 ## Difference
-- less是基于Javascript的客户端处理, 
-- sass是基于ruby是服务器处理, 
+- less是基于Javascript的客户端处理 
+- sass是基于ruby是服务器处理
 
 ## [Less](http://lesscss.org/)
 - `npm i less -D`
