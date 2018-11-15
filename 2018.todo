@@ -1,4 +1,5 @@
 Project:
+  ✔ Interceptor migration solution @done(18-11-13 13:45)
   ✔ 出差准备 @high @started(18-09-17 15:16) @done(18-10-17 11:53) @lasted(4w1d20h37m56s)
     ✔ Annotated I-129S - 看看有没有时间相关的 @done(18-10-17 11:53)
     ✔ 行程表 @done(18-10-17 11:53)
@@ -14,8 +15,9 @@ Office:
   ✔ NHO技术架构介绍 @high @done(18-08-28 11:24)
 
 Learning:
-  Front end
+  Front End
     ☐ Google mWeb Specialist Certification
+      ☐ shell
       ☐ gulp
       ☐ performance
       ✔ sass & less @done(18-10-19 14:57)
@@ -26,14 +28,19 @@ Learning:
         Web App Manifests
       ✔ HTTP access control(CORS) @done(18-09-04 13:20)
       ✔ Grid at MDN @done(18-08-24 11:26)
-    ☐ Wechat reading time recorder
+    ✘ Wechat reading time recorder @cancelled(18-11-13 13:39)
     ☐ Native App
   Articles
     ☐ Summary configurating project scaffold
+  Back End
+    ✔ Nginx @done(18-11-15 18:06)
+    ☐ Spring Cloud
+    ☐ Nexus
+    ☐ Apache/Tomcat
   Devops
-    ☐ Docker
+    ☐ Docker @started(18-11-13 13:35) @high 
+    ☐ AWS 专有名词
     ☐ Kubernates
-    ☐ AWS
 
 Books:
   ✔ 黑客与画家 @started(18-09-04 13:20) @done(18-09-11 13:44) @lasted(1w24m48s)
