@@ -163,3 +163,15 @@ get('package.json')
 console.log('============Q.js============');
 Q.fcall(function() { return 10; })
     .then((val) => console.log('wrap to a promise', val));
+
+
+function test() {
+    return Q.fcall(() => '123')
+        .then(value => `test q: ${value}`)
+}
+
+function aFn() {
+    return test().then(value => { console.log(value); return value; });
+}
+
+aFn().then(value => console.log('aaaaaaaaaaaaaaaa ', value))
