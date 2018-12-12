@@ -39,7 +39,11 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
     - remove the container with volume
         - `docker rm -v lastContainerId`
 
-2. Add your source code into a custom image that is used to create a container.
+- Volume可以使用以下两种方式创建：
+    - 在Dockerfile中指定VOLUME /some/dir
+    - 执行docker run -v /some/dir命令来指定
+
+1. Add your source code into a custom image that is used to create a container.
 ### Dockerfile
 - Key instructions
     - FROM
@@ -72,6 +76,9 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
         - `-p` port mapping
     - `docker ps -a`
     - `docker rm containerId`
+        - `docker rm -f $(docker ps -a -q)`
+            - `-a`: show all
+            - `-q`: only display numeric IDs
     - `docker rmi imageId`
     - `docker push shane/node`, publishing an image to Docker Hub
         - go to hub.docker.com to registry
@@ -112,7 +119,67 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
     - `docker exec containerId node dbSeeder.js`
 
 ### Docker Compose
-  
+```mermaid
+graph LR;
+    A[docker-compose.yml] --> B[docker compose build]
+    B --> C[docker images]
+```
+```yml
+version: '2'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:3000"
+    networks:
+      - nodeapp-network
+  mongodb:
+    image: mongo
+    networks:
+      - nodeapp-network
+
+networks:
+  nodeapp-network:
+    driver: bridge
+```
+- Key service configuration options
+    - build
+    - environment
+    - image
+    - networks
+    - ports
+    - volumes
+    
+- Key docker compose commands
+    - `docker-compose build`
+        - build or rebuild services defined in docker-compose.yml
+        - `docker-compose build mongo`
+            - only rebuild one of the services 
+    - `docker-compose up -d`
+        - create and start the containers
+        - `-d`: running in backend
+        - `docker compose up --no-deps node`
+            - `--no-deps`: do not recreate services that node depends on
+            - `node`: rebuild node image and stop,destroy and recreate only node
+    - `docker-compose down`
+        - take all the containers down(stop and remove)
+        - `docker-compose down --rmi all --volumes`
+            - `--rmi all`: remove all images
+            - `--volumes`: remove all volumes
+    - `docker-compose logs`
+    - `docker-compose ps`
+    - `docker-compose stop`
+    - `docker-compose start`
+    - `docker-compose rm`
+### [Docker Cloud](https://cloud.docker.com/)
+- Link to Different Cloud Providers
+- Setup and provision nodes
+- Create a stack of Docker services to deploy in the cloud
+    - stackfile
+- Manage stacks and services
 ## CMD
 - docker build [options] build
 
