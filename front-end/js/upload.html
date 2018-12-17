@@ -1,0 +1,31 @@
+<input type='file' accept='image/*' onchange='openFile(event)'><br>
+<img id='output'>
+<input type='file' accept='excel/*' onchange='importExcel(event)'><br>
+<script lang="javascript" src="dist/xlsx.full.min.js"></script>
+<script>
+    var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function() {
+            var dataURL = reader.result;
+            var output = document.getElementById('output');
+            output.src = dataURL;
+        };
+        reader.readAsDataURL(input.files[0]);
+    };
+
+    const importExcel = function(event) {
+        const input = event.target;
+        const reader = new FileReader();
+        reader.onload = function() {
+            const bstr = reader.result;
+            const wb = xlsx.read(bstr, {
+                type: 'binary'
+            });
+            const sheetData = wb.Sheets[wb.SheetNames[0]];
+            console.log(sheetData);
+        };
+        reader.readAsBinaryString(input.files[0]);
+    }
+</script>
