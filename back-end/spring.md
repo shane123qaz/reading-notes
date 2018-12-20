@@ -7,6 +7,9 @@
 
 ## Tools
 - [Lombok](https://projectlombok.org/features/all)
+- Gson - Java处理Json
+    - `com.google.code.gson:gson`
+    - [用GSON 五招之内搞定任何JSON数组](https://www.cnblogs.com/jianyungsun/p/6647203.html)
 
 ## Database
 
