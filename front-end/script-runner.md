@@ -7,8 +7,11 @@
 - file 显示文件类型
 - wc 查看文件或统计信息
 - find 查找文件或目录
+    - `find . -name node_modules | xargs rm -rf` 在当前文件下递归查找node_modules，并将其删除
 - ln 创建链接命令，分为软连接和硬连接
-
+- tar 压缩／解压缩 [linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？](https://www.cnblogs.com/52linux/archive/2012/03/04/2379738.html)
+    - `tar -czvf xxx.tar.gz xxx` 压缩
+    - `tar -xzvf xxx.tar.gz` 解压
 ### 文本处理
 - sort 文本排序
 - uniq 文本去重
