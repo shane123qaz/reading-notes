@@ -44,7 +44,8 @@
     + [electron `build cross-platform desktop app with js/html/css`](https://github.com/electron/electron)
     + [perl](https://www.perl.org/)
     + [graphql](https://graphql.org/)
-
+- tools
+    - [see hover state in chrome developer tool](https://stackoverflow.com/questions/4515124/see-hover-state-in-chrome-developer-tools)
 
 
 
