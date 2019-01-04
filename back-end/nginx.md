@@ -83,3 +83,6 @@
 - [nginx-tutorial](https://www.netguru.co/codestories/nginx-tutorial-basics-concepts)
 - [nginx-as-a-reverse-proxy](https://www.liuchungui.com/blog/2015/10/21/mhuan-jing-xia-nginxshi-xian-fan-xiang-dai-li/)
 - [nginx-load-balancer](https://skyao.gitbooks.io/learning-nginx/content/documentation/HTTP_load_balancer.html)
+- [前后端分离：利用nginx的rewrite解决跨域问题]
+    - https://my.oschina.net/keeperv/blog/732555
+    - https://cloud.tencent.com/developer/article/1075355

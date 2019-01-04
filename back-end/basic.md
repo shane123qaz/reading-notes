@@ -23,3 +23,4 @@
     ```
 ### Reference
 - [forward vs redirect](https://www.cnblogs.com/selene/p/4518246.html)
+- [restful api](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)

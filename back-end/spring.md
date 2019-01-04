@@ -2,6 +2,10 @@
 - [starter][https://start.spring.io/]
 - [guides](https://spring.io/guides)
 
+## Spring Configuration with Java
+- @Configuration - at class level
+- @Bean - at method level
+
 ## mybatis
 - [mybatis-3 doc](http://www.mybatis.org/mybatis-3/zh/index.html)
 
