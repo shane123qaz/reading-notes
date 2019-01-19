@@ -14,6 +14,7 @@
 - `nginx`
 - `nginx -s stop`, send signal to a master process, such as stop, quit, reopen, reload.
 - `brew info nginx`, 查看配置文件路径等信息
+- `netstat -an | grep 8000`, 监听端口
 
 ## Configuration
 - web server

@@ -1,4 +1,7 @@
 # Basic
+- `/usr/libexec/java_home -v`: java version
+
+https://github.com/oaeproject/SAMLParser/blob/master/src/main/java/org/sakaiproject/SAMLParser/SAMLParser.java
 
 ## Redirect vs Forward
 - Redirect：间接请求转发，也叫重定向（A找B借钱，B说没有，让A去找C借）
@@ -24,3 +27,4 @@
 ### Reference
 - [forward vs redirect](https://www.cnblogs.com/selene/p/4518246.html)
 - [restful api](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+- [project-package-organization](https://dzone.com/articles/project-package-organization)
