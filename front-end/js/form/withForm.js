@@ -1,36 +1,64 @@
 import React from 'react';
-import _ from 'lodash';
+import {each, merge, filter, debounce, isEmpty} from 'lodash';
+import PropTypes from 'prop-types';
 import {contextHelper, validatorRunner} from '../../helpers/formHelper';
 
-const withForm = ({name, validators, defaultValues = {}}) => (WrappedComponent) => {
+/**
+ * name: [string, required], formName, should be unique;;
+ * registerFields: [function, required], used for register fields with default values, should return object with field names;
+ *  eg: (props) => ({vin: props.vin, msg: ''})
+ * validators: [array, options], used for validating form;
+ *  eg: [{errorMsg: string/object, runner: (formData) => true/false}]
+ *    - if errorMsg is string, value will be used for form level.
+ *    - if errorMsg is object, value will be send to fields.
+ */
+const withForm = ({name, validators, registerFields = () => {}}) => (WrappedComponent) => {
   return class WithForm extends React.Component {
     constructor(props) {
       super(props);
-      const defaultFormData = _.mapValues(defaultValues, value => ({value}));
 
-      this.state = {formData: defaultFormData, error: ''};
+      this.state = {formData: {value: registerFields(props), error: {}}, error: ''};
     }
 
     componentDidMount() {
+      const {formData: {value}} = this.state;
       contextHelper.register(name, this.formDataHandler);
 
-      _.each(defaultValues, (value, name) => contextHelper.send(name, {value}));
+      each(value, (fieldValue, fieldName) => contextHelper.send(fieldName, {formName: name, value: fieldValue}));
     }
 
     componentWillUnmount() {
       contextHelper.unregister(name);
     }
 
-    formDataHandler = ({name, value, error}) => {
-      const formData = _.merge({}, this.state.formData, {[name]: {value, error}});
+    formDataHandler = ({name, value: fieldValue, error: fieldError}) => {
+      const {formData: {value, error}} = this.state;
+      const formData = {
+        value: merge({}, value, {[name]: fieldValue}),
+        error: merge({}, error, {[name]: fieldError})
+      };
 
       this.setState({formData});
     };
 
-    submitForm = () => {
-      const error = validatorRunner(validators)(this.state.formData);
+    submitForm = (next) => {
+      const {formData: {value}} = this.state;
+      const error = validatorRunner(validators)(value);
 
-      this.setState({error});
+      if (typeof error === 'object') {
+        each(error, (fieldError, fieldName) => contextHelper.send(fieldName, {error: fieldError, formName: name}));
+      } else {
+        this.setState({error}, () => this.triggerNextIfNoError(next));
+      }
+    };
+
+    triggerNextIfNoError = (next) => {
+      const {formData: {error: fieldErrors, value}, error} = this.state;
+
+      const hasFieldError = filter(fieldErrors, fieldError => !isEmpty(fieldError)).length > 0;
+      if (!hasFieldError && isEmpty(error)) {
+        next && next(value);
+      }
     };
 
     render() {
@@ -38,11 +66,20 @@ const withForm = ({name, validators, defaultValues = {}}) => (WrappedComponent) 
         <WrappedComponent
           {...this.props}
           {...this.state}
-          submitForm={this.submitForm}
+          submitForm={debounce(this.submitForm, 250)}
         />
       );
     }
   };
+};
+
+withForm.propTypes = {
+  name: PropTypes.string.isRequired,
+  validators: PropTypes.arrayOf({
+    errorMsg: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    runner: PropTypes.func.isRequired
+  }),
+  registerFields: PropTypes.func.isRequired
 };
 
 export default withForm;
