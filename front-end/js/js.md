@@ -312,3 +312,5 @@ el.dispatchEvent(event);
 - File Operation
     - [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
     - [Js操作Excel表格](https://github.com/SheetJS/js-xlsx)
+- Polyfil
+    - Using polyfil to support multiple browsers.
