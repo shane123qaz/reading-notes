@@ -190,6 +190,31 @@ module.exports = {
         ```js
         import './styles.css';
         ```
+- Webpack split chunk with hash code
+  ```js
+  module.exports = {
+    entry: {
+        index_bundle: './src/index.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist/development'),
+        filename: '[name].[chunkhash].js',
+        publicPath: '/'
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    enforce: true,
+                    chunks: 'all'
+                }
+            }
+        }
+    }
+  }
+  ```
 
 ## npm scripts
 - `npx webpack --config webpack.config.js`
