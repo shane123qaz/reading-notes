@@ -88,6 +88,8 @@ Kibana is an open source analytics and visualization platform designed to work w
 
 ## SDN
 
+![AWS](AWS.png)
+
 ## Ansible
 - Ansible解决了什么问题? => 自动化配置
     + 自动化：避免运维工作中重复的工作，以及人的不确定性问题
