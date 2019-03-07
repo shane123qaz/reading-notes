@@ -190,7 +190,7 @@ module.exports = {
         ```js
         import './styles.css';
         ```
-- Webpack split chunk with hash code
+- [Webpack split chunk with hash code](https://stackoverflow.com/questions/48985780/webpack-4-create-vendor-chunk)
   ```js
   module.exports = {
     entry: {
