@@ -9,7 +9,7 @@ Project:
     SSE - Server Sent Events
     Push API & Notification API
   ✔ defect写原因和解决方案 @done(18-09-03 17:34)
-  ☐ 订酒店／订机票
+  ✘ 订酒店／订机票 @cancelled(19-03-15 10:14)
 
 Office:
   ✘ pre-senior材料准备 @high @cancelled(18-12-05 00:00)
@@ -33,12 +33,12 @@ Learning:
     ☐ Native App
       ☐ [Flutter](https://medium.com/asos-techblog/flutter-vs-react-native-for-ios-android-app-development-c41b4e038db9?from=timeline&isappinstalled=0)
   Articles
-    ☐ 写一篇总结 @started(18-12-05 17:47)
+    ✘ 写一篇总结 @cancelled(19-03-15 10:13)
   [Middle End](https://insights.thoughtworks.cn/what-is-zhongtai/)
     ☐ [GraphQL](https://graphql.org/)
   Back End
     ✔ Nginx @done(18-11-15 18:06)
-    ☐ Spring
+    ✔ Spring @done(19-03-15 10:14)
       ☐ [starter][https://start.spring.io/]
       ☐ [guides](https://spring.io/guides)
     ☐ Spring Cloud
@@ -46,10 +46,9 @@ Learning:
     ☐ Apache/Tomcat
   Devops
     ✔ Docker @started(18-11-13 13:35) @high @done(18-12-05 00:01) @lasted(3w10h26m46s)
-    ☐ AWS 专有名词
+    ✔ AWS 专有名词 @done(19-03-15 10:14)
     ☐ Kubernates
-    ☐ Bamboo
-    ☐ Bitbucket
+    ✔ Bitbucket @done(19-03-15 10:14)
 
 Books:
   ✔ 黑客与画家 @started(18-09-04 13:20) @done(18-09-11 13:44) @lasted(1w24m48s)
