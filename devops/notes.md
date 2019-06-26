@@ -31,3 +31,7 @@
 
   - Lambda - 执行指令最长15分钟
 
+
+
+- sts: get-caller-identity : to get the 
+- 

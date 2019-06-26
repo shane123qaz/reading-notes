@@ -55,4 +55,4 @@
     - SNS
     - RDS
 - Containerization
-  - Docker
+  - Docke

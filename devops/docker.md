@@ -116,6 +116,7 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
             - `docker network ls`
             - `docker network inspect isolated_network`: 查看这个network bridge下关联了哪些container
 - Running command inside container.
+  
     - `docker exec containerId node dbSeeder.js`
 
 ### Docker Compose
@@ -186,3 +187,14 @@ networks:
 - docker-machine 
     - 用于帮助我们在远程的机器上安装Docker，或者虚拟机host上直接安装虚拟机并在虚拟机里装docker
     - 还可以用来管理这些虚拟机和Docker
+
+### Docker clean spaces
+
+- docker stop $(docker ps -a -q)
+
+- docker rm $(docker ps -a -q)
+
+- docker rmi $(docker images -q)
+
+- docker rmi -f $(docker images -q)
+
