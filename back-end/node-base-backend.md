@@ -244,17 +244,100 @@
 
 
 
-### Koa
+=================================================================================
 
-### Tsoa
+Typescript
 
+NodeJs
 
+**Koa** vs Express vs Hapi
 
-!abcd1234
+- Express — callback, hard to maintain
+- Koa — no callback any more
 
+Elaticsearch vs **PostgreSQL**
 
+- postgres
 
+  - [**TypeORM**](https://github.com/typeorm/typeorm)
 
+    - https://typeorm.io/#/
+
+  - AWS 
+
+    - Amazon Aurora
+    - [Amazon Relational Database Service (RDS)](https://aws.amazon.com/rds/)
+
+  - JSON / JSONB 全文检索
+
+    - Tsvector
+
+    - Tsquery
+
+      
+
+Tsoa vs **routing-controllers**
+
+- Tsoa —  generate swagger
+- routing-controllers  — Powerful! but not swagger
+  - https://github.com/typestack/typedi
+  - function
+    - `@UserBefore() @UserAfter`
+    - `@JsonController`
+    - `Errors` - `HttpError...` 
+    - `createKoaServer / useKoaServer`: `routePrefix / interceptors / classTransformer`
+    - `validate`: https://github.com/typestack/class-validator
+
+Apollo
+
+- [apollo server](https://www.apollographql.com/docs/apollo-server/features/caching/)
+
+  - ![GraphQL](/Users/xinzhang/Documents/code/doc/reading-notes/back-end/5c443c333b188.png)
+
+  - Rest vs GraphQL
+
+    ```
+    GET /api/v1/articles/
+    GET /api/v1/article/:id/
+    POST /api/v1/article/
+    DELETE /api/v1/article/:id/
+    PATCH /api/v1/article/:id/
+    
+    query {
+      articles(): [Article!]!
+      article(id: Int): Article!
+    }
+    mutation {
+      createArticle(): Article!
+      updateArticle(id: Int): Article!
+      deleteArticle(id: Int): Article!
+    }
+    ```
+
+  - 
+
+### Reference
+
+- [How to build api typescript koa and typeorm](https://inviqa.com/blog/how-build-basic-api-typescript-koa-and-typeorm)
+
+- https://blog.panoply.io/postgresql-vs.-mysql
+
+- https://www.fundebug.com/ — 专注于JavaScript、微信小程序、微信小游戏、支付宝小程序、React Native、Node.js和Java线上应用实时BUG监控.
+
+- [typeorm](https://github.com/typeorm/typeorm)
+- [nodemon](https://github.com/remy/nodemon)
+- [routing-controllers](https://github.com/typestack/routing-controllers#example-of-usage)
+- [postgreSQL](https://www.postgresql.org/docs/11/index.html)
+  - [Setting up a RESTful API with Node.js and PostgreSQL](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/)
+  - [近 20 年的厚积薄发，PostgreSQL 10 新特性详解](https://www.oschina.net/news/89136/yunqi-postgresql-session)
+  - [PostgreSQL何以支持丰富的NoSQL特性](https://dbaplus.cn/news-19-2238-1.html)
+
+- GraphQL
+
+  - [Prisma](https://www.prisma.io/)
+  - [RPC vs REST vs GraphQL](https://www.youtube.com/watch?v=IvsANO0qZEg)
+
+  - [GraphQL directives](https://blog.callstack.io/the-power-of-graphql-directives-81f4987fd76d)
 
 
 
