@@ -141,6 +141,15 @@ services:
     image: mongo
     networks:
       - nodeapp-network
+  postgres:
+  	image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres-db
+    ports:
+      - 5431:5432
+    container_name: postgres
 
 networks:
   nodeapp-network:
@@ -175,6 +184,7 @@ networks:
     - `docker-compose stop`
     - `docker-compose start`
     - `docker-compose rm`
+    - `docker-compose exec <service-name> sh -c "<command>"`: 进入service执行命令
 ### [Docker Cloud](https://cloud.docker.com/)
 - Link to Different Cloud Providers
 - Setup and provision nodes

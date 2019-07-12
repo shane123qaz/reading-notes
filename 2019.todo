@@ -5,9 +5,9 @@ Agile:
         x - Success factors
 
 Study:
-    ☐ Elasticsearch @started(19-06-17 11:19)
+    ☐ Elasticsearch
     ☐ Shell
-    ☐ Advanced TS
+    ☐ Advanced TS @started(19-07-12 11:54)
     ☐ Advanced Docker
     ☐ Advanced AWS 
     ☐ Advanced Terraform

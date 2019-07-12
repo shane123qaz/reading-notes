@@ -338,8 +338,8 @@ Apollo
   - [RPC vs REST vs GraphQL](https://www.youtube.com/watch?v=IvsANO0qZEg)
 
   - [GraphQL directives](https://blog.callstack.io/the-power-of-graphql-directives-81f4987fd76d)
-
-
+  
+  - [How to Combine GraphQL Type Definitions Quickly and Easily with Apollo-Server](https://medium.com/@choudlet/how-to-combine-graphql-type-definitions-quickly-and-easily-with-apollo-server-c96c4d9a7ea1)
 
 
 
