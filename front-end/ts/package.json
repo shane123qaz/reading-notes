@@ -4,8 +4,8 @@
     "description": "",
     "main": "test.js",
     "scripts": {
-        "build": "tsc test.ts",
-        "start": "npm run build & node test.js"
+        "build": "tsc",
+        "start": "npm run build && node src/test.js && rm -f src/test.js"
     },
     "author": "",
     "license": "ISC"
