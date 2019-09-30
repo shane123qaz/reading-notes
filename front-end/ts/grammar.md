@@ -207,6 +207,21 @@
   }
   ```
 
-  
+- Declaration Merging
+
+  - class can't be merged
+  - variable
+  - function
+
+  ```typescript
+  interface Box {
+      height: number;
+      width: number;
+  }
+  interface Box {
+      scale: number;
+  }
+  const box: Box = {height: 5, width: 6, scale: 10};
+  ```
 
   

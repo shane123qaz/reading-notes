@@ -120,6 +120,16 @@ for (let i of list) {
     console.log(i);
 }
 
+interface Box {
+    height: number;
+    width: number;
+}
+interface Box {
+    scale: number;
+}
+
+const box: Box = {height: 5, width: 6, scale: 10};
+
 console.log("*********************");
 
 const promise = () => new Promise((resolver, reject) => {

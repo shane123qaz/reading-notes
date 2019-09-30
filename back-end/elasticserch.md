@@ -102,3 +102,8 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/normalizer.html
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html
 
+
+
+### Question
+
+- Elasticsearch default order by score, if score is same, it will be random.

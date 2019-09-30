@@ -6,6 +6,18 @@
 
 - nvm
 
+  ```shell
+  nvm ls-remote
+  nvm ls
+  nvm i v10.16.3
+  nvm use
+  nvm alias default --version
+  nvm alias default 11.10.0
+  nvm unalias system
+  ```
+
+  
+
 - command
 
   ```shell
