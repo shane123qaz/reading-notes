@@ -13,6 +13,7 @@
     - header中的JavaScript脚本会在页面加载前执行，事件会在被触发后执行
     - 通常外部脚本都是在header中引入
 - 放在body中的JavaScript代码会在页面加载完成后才进行加载，当页面被加载时执行的脚本放在HTML的body部分。放在body部分的脚本通常被用来生成页面的内容
+    
     - body中的JavaScript脚本会按照页面的加载顺序加载执行，事件也会在被触发后再执行
 ```html
 <html>
@@ -46,8 +47,6 @@
     + [graphql](https://graphql.org/)
 - tools
     - [see hover state in chrome developer tool](https://stackoverflow.com/questions/4515124/see-hover-state-in-chrome-developer-tools)
-
-
 
 
 
