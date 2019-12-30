@@ -1,5 +1,17 @@
 # Javascript
 
+## Prototype
+
+```js
+function getInstanceMethods(obj) {
+		const prototype = Object.getPrototypeOf(obj);
+		const names = Object.getOwnPropertyNames(prototype);
+		return names.filter (name => typeof obj[name] === 'function');
+}
+```
+
+
+
 ## Query
 ```js
 $('selector');
