@@ -1,0 +1,24 @@
+- Artitechture
+- Tech framework / libs
+  - immer
+  - react-test-renderer
+- Projects
+  - mol-mobile
+  - mol-mobile-s3-config
+  - mol-mobile-config
+  - react-native-mol-design-system
+    - `npm run start:ios -- --simulator="iPhone 8"`
+    - `npm start -- reset-cache`
+  - [font-awsome](https://fontawesome.com/)
+- Design system
+- Debug
+  - Beta
+  - TestFlight
+- Deploy
+  - Fabric
+
+- Build Process 
+  - How to regenerate fastlane session?
+
+- Security
+  - [cert pinings](https://www.nowsecure.com/blog/2017/06/15/certificate-pinning-for-android-and-ios-mobile-man-in-the-middle-attack-prevention/)
