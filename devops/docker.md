@@ -103,6 +103,7 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
             }
         }
         ```
+    
 - Option 2 //Create a custom bridge network and add containers into it
     - Container network
         - `docker network create --driver bridge isolated_network`: create a custom container network
@@ -115,9 +116,14 @@ C/S架构，客户端向服务器发送请求，服务器负责构建、运行�
         - commands
             - `docker network ls`
             - `docker network inspect isolated_network`: 查看这个network bridge下关联了哪些container
+    
 - Running command inside container.
   
     - `docker exec containerId node dbSeeder.js`
+    
+- Let you container communicate with local machine network
+
+    - `host.docker.internal`:  https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
 
 ### Docker Compose
 ```mermaid
@@ -211,4 +217,8 @@ networks:
 ### Docker Network
 
 
+
+## Reference
+
+- [How To Remove Docker Images, Containers, and Volumes](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
 

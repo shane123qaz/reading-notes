@@ -28,7 +28,23 @@ java -jar app.jar --spring.profiles.active=qa --server.port=8060
 java -jar app.jar --spring.profiles.active=prod --server.port=8060
 
 
+
+filter --> interceptor --> aop
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## mybatis
+
 - [mybatis-3 doc](http://www.mybatis.org/mybatis-3/zh/index.html)
 
 ## Tools
@@ -36,6 +52,8 @@ java -jar app.jar --spring.profiles.active=prod --server.port=8060
 - Gson - Java处理Json
     - `com.google.code.gson:gson`
     - [用GSON 五招之内搞定任何JSON数组](https://www.cnblogs.com/jianyungsun/p/6647203.html)
+
+
 
 ## Database
 

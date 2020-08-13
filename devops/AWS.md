@@ -22,7 +22,7 @@ https://www.youtube.com/playlist?list=PLEiEAq2VkUULlNtIFhEQHo8gacvme35rz
 - Security
   - [ ] IAM - Identity and Access Management
   - [ ] AWS WAF - web application firewall
-  - [ ] AWS Shield - provides expanded DDos attack protection
+  - [ ] AWS Shield - provides expanded DDos attack protection [taskAPI.json](../../../../../Downloads/taskAPI.json) 
   - [ ] Amazon Inspector
     - analyze the behavior of your AWS resources and helps you identify potential secuiry issues
   - [ ] ACM  - AWS Certificate Manager
@@ -49,6 +49,7 @@ https://www.youtube.com/playlist?list=PLEiEAq2VkUULlNtIFhEQHo8gacvme35rz
 - Logs & Monitor
 
   - [ ] CloudWatch
+  - [ ] ELK
 
 - [ ] Secret Manager
 

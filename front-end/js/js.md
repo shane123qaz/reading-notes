@@ -320,9 +320,42 @@ el.dispatchEvent(event);
 
 ## Resource
 - [原生Js实现JQuery常用方法](https://zhouyuexie.github.io/%E5%BC%80%E5%A7%8B%E6%8B%A5%E6%8A%B1%E5%8E%9F%E7%94%9Fjs%E6%96%B9%E6%B3%95%E5%90%A7/)
+
 - [The Complete ECMAScript 2015-2017 Guide](https://flaviocopes.com/ecmascript/#arrow-functions)
+
 - File Operation
     - [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
     - [Js操作Excel表格](https://github.com/SheetJS/js-xlsx)
+    
 - Polyfil
+    
     - Using polyfil to support multiple browsers.
+    
+- diving-deeper-in-javascripts-objects
+
+    - https://blog.bitsrc.io/diving-deeper-in-javascripts-objects-318b1e13dc12
+
+    - ```javascript
+        Object.getOwnPropertyDescriptor(object, keyName)
+        
+        Object.defineProperty(obj, keyName, {
+        	value: string,
+        	writable: boolean,
+        	enumerable: boolean,
+        	configurable: boolean
+        })
+        
+        Object.preventExtensions(obj)
+        Object.isExtensible(obj)
+        
+        Object.seal(obj)
+        
+        Object.freeze(obj)
+        ```
+
+        - object.seal
+          - It prevents new properties from being added just like `Object.preventExtensions`.
+          - **It marks all existing properties as non-configurable.**
+          - Values of present properties can still be changed as long as they are writable.
+          - In short, it prevents adding and/or removing properties.
+

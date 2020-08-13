@@ -170,7 +170,7 @@ module.exports = {
         server.listen(5000, 'localhost', () => {
             console.log('dev server listening on port 5000');
         });
-        ```        
+        ```
 - HMR with stylesheets
     - `npm i --save-dev style-loader css-loader`
     - webpack.config.js
@@ -218,8 +218,22 @@ module.exports = {
 
 ## npm scripts
 - `npx webpack --config webpack.config.js`
+
 - `webpack`
+
 - `webpack --watch`
+
+- using local package
+
+  - ```js
+    file: ../react-native-mol-design-system.tgz
+    ```
+
+  - ```js
+    file: [path]
+    ```
+
+    
 
 
 ## Resources

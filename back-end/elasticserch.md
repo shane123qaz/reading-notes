@@ -104,6 +104,18 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer.html
 
 
 
+#### How to proxy your dev/qe remote elastic search to you local
+
+- download aws-es credential
+
+- append the credential into local file `~/.aws/credentials` and rename it to `aws-es`
+
+- `npm install -g aws-es-kibana`
+
+- run `AWS_PROFILE=aws-es aws-es-kibana ${elasticsearch_endpoint}`
+
+  
+
 ### Question
 
 - Elasticsearch default order by score, if score is same, it will be random.
