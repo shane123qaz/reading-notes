@@ -16,8 +16,6 @@
   nvm unalias system
   ```
 
-  
-
 - command
 
   ```shell
@@ -33,6 +31,10 @@
   npm config get globalconfig
   npm root
   npm root -g
+  
+  # npm install local package
+  npm link {path}
+  npm install {path}
   ```
 
 - package.json
