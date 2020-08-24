@@ -1,6 +1,12 @@
-# CSS Framework compration
+# CSS
 
-## Styled Component
+## Main
+
+
+
+## CSS Framework Compartion
+
+### Styled Component
 
 ```shell
 npm i --save styled-components
@@ -28,9 +34,7 @@ const Buttons = () => (
 )
 ```
 
-
-
-## CSS in JS
+### CSS in JS
 
 ```shell
 npm i --save emotion
@@ -62,9 +66,7 @@ const Content = ({value}) => (
 )
 ```
 
-
-
-## CSS Module
+### CSS Module
 
 - `:global`: 声明全局规则，不会被编译成hash string
 
