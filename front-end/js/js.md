@@ -1,5 +1,42 @@
 # Javascript
 
+- call / apply / bind
+  - `func.call(this, arg1, arg2);`: call 需要把参数按顺序传递进去。
+  - `func.apply(this, [arg1, arg2]);`: apply 则是把参数放在数组里。
+  - `func.bind(this)`: bind 是返回对应函数，便于稍后调用; 多次 bind() 是无效的，只有第一次生效。
+
+- `__proto__` vs `prototyoe`
+  - 所有的对象都有`__proto__` 属性，即原型属性，它是一个内置属性，被用于继承。
+  - `prototype` 是一个只属于function的属性，当使用new方法调用该构造函数的时候，用于构建新对象的`__proto__`。
+- 原型链： 读操作通过`__proto__`一层层链下去的结构
+- 原型继承实现
+  - `Object.create(prototypeObj)` 而不是 `xx.__proto__=prototypeFunc`
+- 继承方式对比 https://segmentfault.com/a/1190000015727237
+- 作用域链：当前作用域没有找到定义，继续向父级作用域寻找，直到全局作用域的这种层级关系。
+- event_loop
+  - Js是单线程，先跑“执行栈”里的同步任务，再跑“任务对列”里的异步任务。
+  - 当“执行栈”里的任务都执行完后，才会从“任务对列”里拿任务丢到“执行栈”里处理。
+  - 宏任务(macroTask)
+    - script全部code, setTimeout, setInterval, setImmediate, I/O, UI Rendering
+  - 微任务(microTask)
+    - Process.nextTick(only Node), Promise, Object.observer, MutationObserver 
+  - 执行顺序
+    - 执行栈先执行`同步任务`, 执行完；
+    - 查看`执行栈`是否为空，如果为`空`，就会去检查`微任务`对列；
+    - 如果`有`微任`就会一次性执行完所有的`微任务`；
+    - 如果`没有`微任务，就会去执行`宏任务`；
+    - 每次`单个`宏任务执行完，都会去检查微任务队列，
+    - 如果`不为空`就会按照`先入先出`的规则执行完`全部`微任务后，设置微任务对列为`null`，再执行下一个宏任务，如此循环。
+  - Node11和浏览器的行为一致，都是每执行一个宏任务就执行完微任务对列。
+  - Node10及以前，执行完同源的宏任务，再去清空微任务列表。
+    - https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#deduplication
+- 闭包
+  - 封住了变量的作用域，有效的防止了全剧污染。
+  - 存在内存泄漏的风险，尤其是以node做服务器，由于内存限制和累积效应，可能会造成进程退出或宕机。
+    - 解决方式：显示对外暴露一个接口，用于清理变量。
+
+
+
 ## Prototype
 
 ```js
@@ -328,7 +365,7 @@ el.dispatchEvent(event);
     - [Js操作Excel表格](https://github.com/SheetJS/js-xlsx)
     
 - Polyfil
-    
+  
     - Using polyfil to support multiple browsers.
     
 - diving-deeper-in-javascripts-objects
