@@ -14,7 +14,7 @@
     - Component diff：如果组件是同一类型，就进行tree diff；如果不是，就放入patches中，被重新渲染。所以推荐使用shouldComponentUpdate来提高React性能。
     - List diff：节点比较，其实只用三种操作：插入、移动、删除。没有key的列表diff下，只能通过按顺序对每个元素对比。
 
-- Riot的思路是直接基于浏览器的DOM进行Diff，所以Riot只有React的1/8的体积
+- Riot的思路是直接基于浏览器的DOM进行Diff，所以Riot只有React的1/8的体积 - 在一篇文章中看到，具体怎么样尚未尝试
 
 - [gooact-react-in-160-lines-of-javascript](https://medium.com/@sweetpalma/gooact-react-in-160-lines-of-javascript-44e0742ad60f)
 
