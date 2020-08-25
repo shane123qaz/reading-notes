@@ -31,6 +31,10 @@ sequenceDiagram
 	
 ```
 
+Add picture as the github markdown can't display mermaid correctly
+
+<img src="images/authentication-code-flow.png" style="zoom:150%;" />
+
 ### Referance
 
 - https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/
