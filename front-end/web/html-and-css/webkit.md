@@ -1,0 +1,37 @@
+- [开发者需要了解的WebKit](https://www.infoq.cn/article/webkit-for-developers/)
+  - [原文](https://www.paulirish.com/)
+  - WebKit Ports是什么？
+    - Webkit被port（移植）到各个不同的平台，包括桌面端和移动端，这种做法叫“WebKit port”
+  - 现代浏览器组件
+    - HTML、XML、CSS、Javascript解析器
+    - Layout
+    - 文字和图形渲染
+    - GPU交互
+    - 网络访问
+    - 硬件加速
+  - 每个WebKit port共同之处
+    - DOM、window、document
+    - CSS对象模型
+    - CSS解析，键盘事件
+    - HTML解析和DOM构建
+    - 布局和定位
+    - Chrome开发工具和WebKit检查器
+    - contenteditable、pushState、文件 API、大多数 SVG、CSS Transform math、Web Audio API、localStorage
+  - WebKit port没有共享的
+    - GPU相关技术
+      - 3D转换
+      - WebGL
+      - 视频解码
+    - 将2D图像绘制到屏幕
+      - 解析方式
+      - SVG和CSS渐变绘制
+    - 文字绘制和断字
+    - 网络层（SPDY、预渲染、WebSocket）
+    - Javascript引擎
+      - JavascriptCore在WebKit repo中，V8和JavascriptCore被绑定在WebKit中。
+    - 表单控制器渲染
+    - `<video>` 和`<audio>`元素表现和解码表现
+    - 图详解吗
+    - 页面导航
+      - pushState()的导航部分
+    - SSL功能，如Strict Transport Security 和 Public Key Pins

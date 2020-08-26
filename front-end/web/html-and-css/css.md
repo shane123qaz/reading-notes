@@ -1,12 +1,16 @@
-# CSS
+## CSS
 
-## Main
+### Main
 
+### Reflow vs Repaint
 
+####reference
 
-## CSS Framework Compartion
+- https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/common-tag.html
 
-### Styled Component
+### CSS Framework Compartion
+
+#### Styled Component
 
 ```shell
 npm i --save styled-components
@@ -34,7 +38,7 @@ const Buttons = () => (
 )
 ```
 
-### CSS in JS
+#### CSS in JS
 
 ```shell
 npm i --save emotion
@@ -66,7 +70,7 @@ const Content = ({value}) => (
 )
 ```
 
-### CSS Module
+#### CSS Module
 
 - `:global`: 声明全局规则，不会被编译成hash string
 
