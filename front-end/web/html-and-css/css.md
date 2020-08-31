@@ -146,9 +146,9 @@
       - 元素: `body`, `img` ...
       - 属性选择器:`*[rel=up]` , `a[id="a-02"]`...
 
-    - 规则:
+    - 规则, 优先级矩阵:
 
-      - 行内样式(+1000) > ID选择器(+100) > 类、属性选择器和伪类选择器(+10) > 元素和伪元素选择器(+1).
+      - 行内样式(+1000) > ID选择器(+100) > 类、属性选择器和伪类选择器(+10) > 元素和伪元素选择器(+1) > 通配符*(+0).
 
       - 如果权重值相同，后出现的生效。
 
@@ -198,6 +198,47 @@
   - [BEM](http://getbem.com/naming/)：Block__Element--Modifier
   - OOCSS：Object Oriented CSS
   - MVCSS：Modular View CSS
+
+- 动画
+
+  - attributes
+
+    - `animation-duration`: 指定动画完成一个周期所需要时间
+    - `animation-timing-function`: 指定动画计时函数，即动画的速度曲线，默认是 "ease"
+    - `animation-delay`: 指定动画延迟时间，即动画何时开始
+    - `animation-iteration-count`: 指定动画播放的次数，默认是 1
+    - `animation-direction`: 指定动画播放的方向。默认是 normal
+    - `animation-fill-mode`: 指定动画填充模式。默认是 none
+    - `animation-play-mode`: 指定动画播放状态，正在运行或暂停。默认是 running
+    - `animation-name`: 指定 @keyframes 动画的名称
+
+  - `@keyframes`: 关键帧
+
+    - ```css
+      .move {
+        animation: move 2s linear infinite, color 3s infinite
+      }
+      
+      @keyframe	move {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(200px, 0px);
+        }
+      }
+      
+      @keyframe color {
+        20% {
+          background-color: bisque;
+        }
+        80% {
+          background-color: chocolate;
+        }
+      }
+      ```
+
+      
 
 ####Reference
 
