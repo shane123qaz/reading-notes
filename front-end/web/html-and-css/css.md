@@ -1,6 +1,6 @@
 ## CSS
 
-### Main
+### Basic
 
 - Every element in web design is a rectangular box
 
@@ -11,13 +11,13 @@
     - width=content-box-width + padding-left + padding-right + border-left + border-right
     - height=content-box-height + padding-top + padding-bottom + border-top + border-bottom
 
-- CSS文档流，即normal-flow
+- CSS文档流，其实分为定位流、浮动流、普通流三种。
 
-  - 元素按照其在HTML中的位置顺序决定其排布的过程。
+  - 普通流：元素按照其在HTML中的位置顺序决定其排布的过程。
 
   - 只要不是float和绝对定位方式布局的，都在普通流里。
 
-  - 定位
+  - [定位](http://zh.learnlayout.com/position.html)
 
     - static：position默认是static，即未被设置定位的。而只有元素被定位了，它的top，left，right，bottom才会生效。
     - relative：元素会在自身文档流所在位置上被移动，其他的元素则不会调整位置来弥补它偏离后剩下的空隙。
@@ -67,9 +67,183 @@
             }
             ```
 
+        - clearfix
+
+          ```css
+          .clearfix {
+            overflow: auto;
+          }
+          ```
+
+- BFC / IFC / GFC / FFC
+
+  - BFC：块级格式化上下文
+    - 布局规则：内部的box会在垂直方向，一个接一个的摆放
+    - 属于同一个BFC的两个相邻box的margin会发生重叠
+      - 两个相邻块级子元素分别属于不同BFC时可以组织margin重叠
+    - 计算BFC的高度时，浮动元素也参与计算
+  - IFC：行级格式化上下文
+    - IFC的line box（线框）高度由其包含行内元素中最高的实际高度计算而来（不受到竖直方向的padding/margin影响)
+    - 用途
+      - 水平居中：当一个块要在环境中水平居中时，设置其为inline-block则会在外层产生IFC，通过text-align则可以使其水平居中
+      - 垂直居中：创建一个IFC，用其中一个元素撑开父元素的高度，然后设置其vertical-align:middle，其他行内元素则可以在此父元素下垂直居中
+  - GFC：网格布局格式化上下文
+    - `display:grid`
+  - FFC：自适应格式化上下文
+    - `display:flex` or `display:inline-flex`
+
+-  [选择器](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-selector.html)
+
+  - 基本选择器
+
+    - 通配符选择器（`＊`）
+    - id选择器（`#ID`）
+    - 类选择器（`.className`）
+    - 元素选择器(`E`)
+    - 后代选择器（`Ｅ Ｆ`）
+    - 子元素选择器(`E>F`)
+    - 相邻兄弟元素选择器(`E + F`)
+    - 群组选择器（`selector1,selector2,...,selectorN`）
+
+  - 属性选择器
+
+    - `E[attr]`：只使用属性名，但没有确定任何属性值
+    - `E[attr="value"]`：指定属性名，并指定了该属性的属性值
+    - `E[attr~="value"]`：指定属性名，并且具有属性值，此属性值是一个词列表，并且以空格隔开，其中词列表中包含了一个value词，而且等号前面的“〜”不能不写
+    - `E[attr^="value"]`：指定了属性名，并且有属性值，属性值是以value开头的；
+    - `E[attr$="value"]`：指定了属性名，并且有属性值，而且属性值是以value结束的；
+    - `E[attr*="value"]`：指定了属性名，并且有属性值，而且属值中包含了value；
+    - `E[attr|="value"]`：指定了属性名，并且属性值是value或者以“value-”开头的值（比如说zh-cn）;
+
+  - 伪类选择器
+
+    - 锚点伪类
+      - `:link`
+      - `:visited`
+    - 用户行为伪类
+      - `:hover`
+      - `:active`
+      - `:focus`
+    - UI元素状态伪类
+      - `:checked`
+      - `:enabled`
+      - `:disabled`
+
+  - CSS3:nth选择器
+
+    - `first-child`
+    - `last-child`
+    - `nth-child()`
+
+  - 权重:即选择器的优先级
+
+    - 凡是属性值后加上了`!important`，那么它的值不会被其他值替换.
+
+    - 选择器
+
+      - 伪类选择器:`:link`, `:visited`, `:hover`, `:active` ...
+      - 伪元素选择器: `::before`, `::after`, `::first-letter`, `::first-line`, `::selection` ...
+      - 元素: `body`, `img` ...
+      - 属性选择器:`*[rel=up]` , `a[id="a-02"]`...
+
+    - 规则:
+
+      - 行内样式(+1000) > ID选择器(+100) > 类、属性选择器和伪类选择器(+10) > 元素和伪元素选择器(+1).
+
+      - 如果权重值相同，后出现的生效。
+
+      - 带有上下文关系的选择器比单纯的元素选择器权重要高.
+
+        - ```css
+          p span {
+            front-style: italic;
+          }
+          ```
+
+      - 组合
+
+        - 匹配所有带title的p元素
+
+          ```css
+          p[title] {
+            front-weight: bold;
+          }
+          ```
+
+        - 匹配所有a标签link状态之后的样式,利用伪元素来凭空生成内容
+
+          ```css
+          a:link:after {
+            content: "("attr(href)")";
+          }
+          ```
+
+- [布局](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-layout.html)
+
+  - 常见布局：固定尺寸 和 自适应（响应式）布局
+
+  - flexbox
+
+    - 如果想IE10支持flex布局需要添加`-ms-flexbox`
+
+      - ```css
+        .container {
+          display: flex;
+          display: -ms-flexbox;
+        }
+        ```
+
+- CSS命名
+
+  - [BEM](http://getbem.com/naming/)：Block__Element--Modifier
+  - OOCSS：Object Oriented CSS
+  - MVCSS：Modular View CSS
+
+####Reference
+
+- [学习css布局](http://zh.learnlayout.com/)
+- [css基础&进阶](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/)
+
 ### Reflow vs Repaint
 
-####reference
+ -  Page render simple flow
+
+    ```mermaid
+    graph LR
+    	HTML --> HTML-parser --> DOM-tree
+    	Style-Sheet --> CSS-parser --> Style-tree
+    	DOM-tree --> Render-tree
+    	Style-tree --> Render-tree
+    	Render-tree --> Layout
+    	Layout --> Render-tree
+    	Render-tree --> Painting --> Display
+    	
+    ```
+
+- [重排一定会导致重绘，重绘不一定导致重排](https://juejin.im/post/6844904083212468238)
+
+  - 重排（回流）：重新生成布局，重新排列元素
+    - 触发机制
+      - 添加/删除可见的DOM元素
+      - 元素位置改变
+      - 元素本身尺寸改变
+      - 内容改变
+      - 页面渲染器初始化
+      - 浏览器窗口大小改变
+  - 重绘：改变外观，不改变布局
+
+- 最小化渲染
+
+  - 不要一条条地改变样式，而要通过改变class，或者csstext属性，一次性地改变样式
+  - 当批量修改DOM时 - 重排2次
+    - 让元素脱离文档流 - 隐藏元素 `display:none`
+    - 对其进行多重修改
+    - 将元素带回文档中
+  - 缓存布局信息 - 中间状态不显示在DOM上
+  - position属性为`absolute`或`fixed`的元素，重排的开销会比较小，因为不用考虑它对其他元素的影响
+  - 使用虚拟DOM的脚本库
+
+####Reference
 
 - https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/common-tag.html
 

@@ -74,7 +74,7 @@
 
 https://juejin.im/post/6844903975112671239#heading-11
 
-1s 60帧，所以每帧分到的时间是1000ms/60 = 16ms，不要让一帧的时间超过16ms
+1s 60帧，所以每帧分到的时间(刷新率FPS-frame per second)是1000ms/60 = 16ms，不要让一帧的时间超过16ms
 
 ### Life of a frame
 
@@ -259,8 +259,9 @@ const example = (props) => {
   - Ensure that hooks are called in the same order each time a component render
 
 - Call Hooks from React function components.
-  - Call Hooks from custom Hooks
-
+  
+- Call Hooks from custom Hooks
+  
 - When we use multiple state or effect hook in a single component
 
   - **React relies on the order in which Hooks are called**.
